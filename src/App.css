@@ -1,0 +1,51 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  height: calc(100% - 60px); /* Adjusted for the TopNavbar height */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.top-navbar {
+  height: 60px;
+  background-color: #fef7e5;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.sidebar {
+  width: 4.2rem;
+  background-color: rgb(165, 164, 170);
+  min-height: 100vh;
+  transition: 0.3s width;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sidebar.expanded {
+  width: 13rem;
+}
+
+.dashboard {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
